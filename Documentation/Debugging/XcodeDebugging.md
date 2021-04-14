@@ -1,8 +1,6 @@
 # Xcode Debugging Tips
 
-------
-
-
+<br>
 
 ### Introduction to Constraint Debugging
 
