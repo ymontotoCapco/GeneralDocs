@@ -1,22 +1,10 @@
 # Xcode Debugging Tips
 
-
-
-### Table of contents
-
-1. [Introduction to Constraint Debugging](#introduction)
-2. [Debugging with the lldb](#lldb)
-3. [Constraint Identifiers](#identifiers)
-4. [View Hierarchy Debugger](#vhd)
-5. [Color Blended Layers](#colorBlend)
-
-
-
 ------
 
 
 
-### <a name="introduction">Introduction to Constraint Debugging</a>
+### Introduction to Constraint Debugging
 
 While programmatically creating constraints can alleviate the stress of managing constraint merge conflicts between developers, sometimes the use of Storyboards is unavoidable. When you are presented with a project that has a whole pile of constraint issues, there are some approaches that can make this step in the debugging process a little easier on you and other developers.
 
@@ -28,7 +16,7 @@ Let's imagine that you are working on a project and you need to adjust the `Test
 
 <br>
 
-#### <a name="lldb">Debugging with the lldb</a>
+#### Debugging with the lldb
 
 One quick and easy way is to access the object is through the `lldb`. The Lower Level Debugger allows you to execute commands on the objects and views of your choice whether through direct referencing or through manipulating the memory allocation of the view by its memory address. When dealing with constraint issues, an effective solution is to isolate the constraint by selecting the memory address (ex: `0x7fa632be08fe0`) and executing the following obj-c command in the lldb:
 
@@ -40,7 +28,7 @@ ex [(UIView *)0x7fa632be08fe0 setBackgroundColor: [UIColor yellowColor]]
 
 <br>
 
-#### <a name="identifiers">Debugging with Constraint Identifiers</a>
+#### Debugging with Constraint Identifiers
 
 Another *quick* way that you can debug constraint errors is assigning an identifier to the specific constraint you want to isolate in the **Size Inspector** tab of the view in the **Interface Builder**. By doing this, we can amplify the amount of information that the debugger gives us in case of constraints errors. You will find that the Identifier will be presented in plain text in the console allowing you a quick way to identify and fix this error.
   
@@ -50,7 +38,7 @@ Another *quick* way that you can debug constraint errors is assigning an identif
 
 <br>
 
-#### <a name="vhd">View Hierarchy Debugger</a>
+#### View Hierarchy Debugger
 
 While not as intuitive as the previous mentioned methods, there is an option to view the constraints of the view through a 3D approach. The View Hierarchy Debugger (referred to as the VHD from now on) is a tool baked into Xcode that lets you extrapolate your views into a stacked set so you can see their hierarchy structure and pinpoint the exact location, and size of the view without having to write code into the `lldb`. The VHD can simplify understanding the constraints of a view by showing them to you in an easy to digest structure in the Interface Builder right panel.
 
@@ -60,7 +48,7 @@ While not as intuitive as the previous mentioned methods, there is an option to 
 
 <br>
 
-#### <a name="colorBlend">Color Blended Layers</a>
+#### Color Blended Layers
 
 Like most developers, having a beautiful UI for you app is always a plus. Sometimes, we even sacrifice performance to have that special animation, or image in the app. When you are working on your next app, keep in mind that the views on the screen can all have impact on performance. This isnt to say that you cant have optimized code throughout your app, but more that the way the app renders images might not be something you are considering.
 
