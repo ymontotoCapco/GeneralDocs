@@ -8,6 +8,7 @@
 2. [Debugging with the lldb](#lldb)
 3. [Constraint Identifiers](#identifiers)
 4. [View Hierarchy Debugger](#vhd)
+5. [Color Blended Layers](#colorBlend)
 
 
 
@@ -45,7 +46,7 @@ Another *quick* way that you can debug constraint errors is assigning an identif
   
 | <img src="https://github.com/ymontotoCapco/GeneralDocs/blob/7a8ed4765681238ff2cd797c1ee80086f8baf5e8/Documentation/Debugging/images/InterfaceBuilder.png" width="200px" /> |
 | :----------------------------------------------------------: |
-| <sub>Here the constraint identifier is: **\*\*first**</sub>  |
+| <sub>In this image we can see that the constraint has been set to have the identifier of: **\*\*first**</sub>  |
 
 <br>
 
@@ -57,3 +58,20 @@ While not as intuitive as the previous mentioned methods, there is an option to 
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | <sub>The View Hierarchy Debugger is the located at the bottom right above the console.</sub> | <sub>This is the description of the selected view where the frame of the view is shown.</sub> |
 
+<br>
+
+#### <a name="colorBlend">Color Blended Layers</a>
+
+Like most developers, having a beautiful UI for you app is always a plus. Sometimes, we even sacrifice performance to have that special animation, or image in the app. When you are working on your next app, keep in mind that the views on the screen can all have impact on performance. This isnt to say that you cant have optimized code throughout your app, but more that the way the app renders images might not be something you are considering.
+
+All views throughout take up some sort of memory on device, and you can easily debug this by activating the `Color Blended Layers` option on the simulator Debug menu. When this debugging feature is enabled, you should be able to (hopefully) see all green throughout your application. When you start seeing red and different shades of it there might be a performance issue with your app.
+
+| <img src="https://github.com/ymontotoCapco/GeneralDocs/blob/572fd52053cc14df3a969264d4722ca35a56925d/Documentation/Debugging/images/GoodRender.png" width="200px" /> | <img src="https://github.com/ymontotoCapco/GeneralDocs/blob/572fd52053cc14df3a969264d4722ca35a56925d/Documentation/Debugging/images/BadRender.png" width="200px" /> |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <sub>This example shows what an optimized tableview might look like.</sub> | <sub>This example shows how a poorly optimized tableview would look (notice the shades of red).</sub> |
+
+In the examples above, the `UIIMageView`, `UITableView`, and even the `UITableViewCell` all each are rendered and take up precious resources on the device. By making sure that the image has no alpha, and that the tableview cells all have a background color of `white` we are able to reduce the amount of on device operations which are needed to produce a transparent image and cell.
+
+> Seems like a given, but remember: <br>
+> 🟢&nbsp; - **Good**<br>
+> 🔴&nbsp; - **Bad**
