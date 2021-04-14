@@ -25,7 +25,7 @@ We will discuss the ability to debug your constraint errors right inside Xcode w
 
 Let's imagine that you are working on a project and you need to adjust the `TestView.xib` of the project. After tinkering a little bit, you notice there are constraint issues and that the view no longer looks how you think it would. Now, you want to figure out why your constraints are acting up when you *know* you set the constraints correctly. There are a few ways to approach the debugging of constraints: one through the Xcode Inspector, and the other using the `lldb` inside the Xcode console.
 
-
+<br>
 
 #### <a name="lldb">Debugging with the lldb</a>
 
@@ -37,7 +37,7 @@ ex [(UIView *)0x7fa632be08fe0 setBackgroundColor: [UIColor yellowColor]]
 
 > ***Note***: In my opinion, this method is the quickest and easiest way to manipulate your views. It's simplicity comes from the fact that you don't have to navigate through all of your constraints to try and find the one that has ruined the view hierarchy structure.
 
-
+<br>
 
 #### <a name="identifiers">Debugging with Constraint Identifiers</a>
 
@@ -47,7 +47,7 @@ Another *quick* way that you can debug constraint errors is assigning an identif
 | :----------------------------------------------------------: |
 | <sub>Here the constraint identifier is: **\*\*first**</sub>  |
 
-
+<br>
 
 #### <a name="vhd">View Hierarchy Debugger</a>
 
