@@ -24,7 +24,7 @@ We will discuss the ability to debug your constraint errors right inside Xcode w
 
 
 
-Let's imagine that you are working on a project and you need to adjust the `TestView.xib` of the project. After tinkering a little bit, you notice there are constraint issues and that the view no longer looks how you think it would. Now, you want to figure out why your constraints are acting up when you *know* you set the constraints correctly. There are a few ways to approach the debugging of constraints: one through the Xcode Inspector, and the other using the `lldb` inside the Xcode console.
+Let's imagine that you are working on a project and you need to adjust the `TestView.xib` of the project. After tinkering a bit, you notice there are constraint issues and that the view no longer looks how you think it would. Now, you want to figure out why your constraints are acting up when you *know* you set the constraints correctly. There are a few ways to approach the debugging of constraints: one through the Xcode Inspector, and the other using the `lldb` inside the Xcode console.
 
 <br>
 
@@ -70,7 +70,7 @@ All views throughout take up some sort of memory on device, and you can easily d
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | <sub>This example shows what an optimized tableview might look like.</sub> | <sub>This example shows how a poorly optimized tableview would look (notice the shades of red).</sub> |
 
-In the examples above, the `UIIMageView`, `UITableView`, and even the `UITableViewCell` all each are rendered and take up precious resources on the device. By making sure that the image has no alpha, and that the tableview cells all have a background color of `white` we are able to reduce the amount of on device operations which are needed to produce a transparent image and cell.
+In the examples above, the `UIImageView`, `UITableView`, and even the `UITableViewCell` all each are rendered and take up precious resources on the device. By making sure that the image has no alpha, and that the tableview cells all have a background color of `white` we are able to reduce the amount of on device operations which are needed to produce a transparent image and cell.
 
 > Seems like a given, but remember: <br>
 > 🟢&nbsp; - **Good**<br>
