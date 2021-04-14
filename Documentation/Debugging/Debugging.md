@@ -42,8 +42,8 @@ ex [(UIView *)0x7fa632be08fe0 setBackgroundColor: [UIColor yellowColor]]
 #### <a name="identifiers">Debugging with Constraint Identifiers</a>
 
 Another *quick* way that you can debug constraint errors is assigning an identifier to the specific constraint you want to isolate in the **Size Inspector** tab of the view in the **Interface Builder**. By doing this, we can amplify the amount of information that the debugger gives us in case of constraints errors. You will find that the Identifier will be presented in plain text in the console allowing you a quick way to identify and fix this error.
-
-| <img src="/Users/YMNT/Documents/Development/Documentation Writeup/Debugging_Images/Interface Builder.png" style="zoom:50%;" /> |
+  
+| <img src="https://github.com/ymontotoCapco/GeneralDocs/blob/7a8ed4765681238ff2cd797c1ee80086f8baf5e8/Documentation/Debugging/images/InterfaceBuilder.png" width="200px" /> |
 | :----------------------------------------------------------: |
 | <sub>Here the constraint identifier is: **\*\*first**</sub>  |
 
@@ -53,7 +53,7 @@ Another *quick* way that you can debug constraint errors is assigning an identif
 
 While not as intuitive as the previous mentioned methods, there is an option to view the constraints of the view through a 3D approach. The View Hierarchy Debugger (referred to as the VHD from now on) is a tool baked into Xcode that lets you extrapolate your views into a stacked set so you can see their hierarchy structure and pinpoint the exact location, and size of the view without having to write code into the `lldb`. The VHD can simplify understanding the constraints of a view by showing them to you in an easy to digest structure in the Interface Builder right panel.
 
-| ![](/Users/YMNT/Documents/Development/Documentation Writeup/Debugging_Images/VHD.png) | <img src="/Users/YMNT/Documents/Development/Documentation Writeup/Debugging_Images/VHD_sidebar_frame.png" style="zoom:50%;" /> |
+| <img src="https://github.com/ymontotoCapco/GeneralDocs/blob/7a8ed4765681238ff2cd797c1ee80086f8baf5e8/Documentation/Debugging/images/VHD.png" width="200px" /> | <img src="https://github.com/ymontotoCapco/GeneralDocs/blob/7a8ed4765681238ff2cd797c1ee80086f8baf5e8/Documentation/Debugging/images/VHD_sidebar.png" width="200px" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | <sub>The View Hierarchy Debugger is the located at the bottom right above the console.</sub> | <sub>This is the description of the selected view where the frame of the view is shown.</sub> |
 
