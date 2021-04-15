@@ -7,11 +7,11 @@ GeneralDocs is a rolling repo of the markdown files I create to help myself and 
 ## Documentation Available
 
 - [Debugging](https://github.com/ymontotoCapco/GeneralDocs/tree/main/Documentation/Debugging)
-  - [Xcode Debugging](https://github.com/ymontotoCapco/GeneralDocs/blob/ae64685eae30c8d6738b17fda57cdaf95684b68a/Documentation/Debugging/XcodeDebugging.md)
+  - [Xcode Debugging](https://github.com/ymontotoCapco/GeneralDocs/blob/89ff03371eb2f522127d00a10c7a43b08e3fe3a8/Documentation/Debugging/XcodeDebugging.md)
 
 <br><br>
 
-### Why
+## Why
 Normally, as developers we can pick up habits on how to code, and effective tools to make our jobs easier. As we learn new techniques, we tend to forget the ones that work best and some which are even best practices. This repo serves as a guide on approaching situations like these and techniques that might help you out when you cant remember the exact method to solving your issue.
 
 <br>
